@@ -8,7 +8,7 @@ class App extends React.Component {
     handleChange = (e) => {
         this.setState({ text: e.target.value})
     }
-    handleReset(){
+    handleClick(){
         this.setState({text: ""});
     }
 
@@ -16,7 +16,7 @@ class App extends React.Component {
         return (
             <>
                 <input value={this.state.text} type="text" onChange={this.handleChange} />
-                <button onClick={this.handleReset.bind(this)}>Reset</button>
+                <button onClick={this.handleClick.bind(this)}>Reset</button>
                 <h1 className="title">{this.state.text.toLocaleUpperCase()}</h1>
             </>)
     }
